@@ -19,7 +19,7 @@ def main():
 @app.route('/link0')
 def link0():
     print("Reload")
-    return render_template('index.jsp')
+    return render_template('link0.jsp')
 
 @app.route('/link1')
 def link1():

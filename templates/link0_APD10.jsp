@@ -7,13 +7,12 @@
 <body>
     <div style="text-align: left;">
         <table>
-            <colgroup>
-                <col style="width: 50%;">
-                <col style="width: 50%;">
-            </colgroup>
+            <tr>
+                <td style="height: 20px;"></td>
+            </tr>
             <tr>
                 <td>
-                    <img src="{{ url_for('static', filename='img/APD04.jpg')}}" width="1000" alt="None">
+                    APD10
                 </td>
             </tr>
         </table>
