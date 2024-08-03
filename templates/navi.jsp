@@ -25,15 +25,15 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ITGC</a>
             <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/link1">PBC</a></li>
-            <li><a class="dropdown-item" href="/link2">설계평가</a></li>
-            <li><a class="dropdown-item" href="/link3">운영평가</a></li>
+            <li><a class="dropdown-item" href="/link1_1">PBC</a></li>
+            <li><a class="dropdown-item" href="/link1_2">설계평가</a></li>
+            <li><a class="dropdown-item" href="/link1_3">운영평가</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">IT Dependency</a>
             <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/link9">프로그램 Souurce 분석</a></li>
+            <li><a class="dropdown-item" href="/link2_1">프로그램 Souurce 분석</a></li>
             <li><a class="dropdown-item" href="/link9">추가기능 1</a></li>
             <li><a class="dropdown-item" href="/link9">추가기능 2</a></li>
           </ul>

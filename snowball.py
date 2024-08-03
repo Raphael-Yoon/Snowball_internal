@@ -3,8 +3,9 @@ from openpyxl import load_workbook
 #import ssl
 
 import link1_pbc
-import link2_design
-import link3_operation
+import link1_design
+import link1_operation
+import link2_source
 
 app = Flask(__name__)
 
@@ -21,30 +22,25 @@ def link0():
     print("Reload")
     return render_template('link0.jsp')
 
-@app.route('/link1')
+@app.route('/link1_1')
 def link1():
     print("PBC Function")
-    return render_template('link1.jsp')
+    return render_template('link1_1.jsp')
 
-@app.route('/link2')
+@app.route('/link1_2')
 def link2():
     print("RCM Function")
-    return render_template('link2.jsp')
+    return render_template('link1_2.jsp')
 
-@app.route('/link3')
+@app.route('/link1_3')
 def link3():
     print("Paper Function")
-    return render_template('link3.jsp')
+    return render_template('link1_3.jsp')
 
-@app.route('/link4')
-def link4():
-    print("Monitoring Function")
-    return render_template('link4.jsp')
-
-@app.route('/link9')
-def link9():
-    print("ETC Function")
-    return render_template('link9.jsp')
+@app.route('/link2_1')
+def link2_1():
+    print("Source Function")
+    return render_template('link2_1.jsp')
 
 @app.route('/pbc_generate', methods=['POST'])
 def pbc_generate():
@@ -59,7 +55,7 @@ def design_generate():
     print("Design Generate called")
 
     form_data = request.form.to_dict()
-    output_path = link2_design.design_generate(form_data)
+    output_path = link1_design.design_generate(form_data)
 
     return send_file(output_path, as_attachment=True)
 
@@ -68,7 +64,7 @@ def design_template_downloade():
     print("Design Template Download called")
 
     form_data = request.form.to_dict()
-    output_path = link2_design.design_template_download(form_data)
+    output_path = link1_design.design_template_download(form_data)
 
     return send_file(output_path, as_attachment=True)
 
@@ -76,7 +72,7 @@ def design_template_downloade():
 def paper_template_download():
 
     form_data = request.form.to_dict()
-    output_path = link3_operation.paper_template_download(form_data)
+    output_path = link1_operation.paper_template_download(form_data)
 
     param1 = form_data.get('param1')
     param2 = form_data.get('param2')
@@ -91,7 +87,15 @@ def paper_template_download():
 def paper_generate():
 
     form_data = request.form.to_dict()
-    output_path = link3_operation.paper_generate(form_data)
+    output_path = link1_operation.paper_generate(form_data)
+
+    return send_file(output_path, as_attachment=True)
+
+@app.route('/source_analysis', methods=['POST'])
+def source_analysis():
+
+    form_data = request.form.to_dict()
+    output_path = link2_source.source_analysis(form_data)
 
     return send_file(output_path, as_attachment=True)
 
